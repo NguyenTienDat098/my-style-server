@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 async function connect() {
   try {
     mongoose.connect(
-      "mongodb+srv://nguyentiendat098:LfMB817PTlOLJXMh@cluster0.rv7ojc4.mongodb.net/?retryWrites=true&w=majority/Codeui",
+      "mongodb+srv://nguyentiendat098:LfMB817PTlOLJXMh@cluster0.rv7ojc4.mongodb.net/?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
       }
