@@ -10,6 +10,7 @@ const CodeBlockSchema = new Schema(
     code: { type: Object, unique: false },
     author: { type: Object, unique: false },
     filter: { type: String, unique: false },
+    main_code: { type: String, unique: false },
   },
   {
     _id: false,
