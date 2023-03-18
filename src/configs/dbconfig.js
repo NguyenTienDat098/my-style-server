@@ -5,7 +5,10 @@ async function connect() {
     mongoose.connect(
       "mongodb+srv://nguyentiendat098:LfMB817PTlOLJXMh@cluster0.rv7ojc4.mongodb.net/?retryWrites=true&w=majority",
       {
+        connectTimeoutMS: 30000, // thời gian chờ kết nối
+        socketTimeoutMS: 30000, // thời gian chờ socket
         useNewUrlParser: true,
+        useUnifiedTopology: true,
       }
     );
     mongoose.connection.on("error", (error) => console.log(error));
