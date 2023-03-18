@@ -84,6 +84,21 @@ class SitesController {
         res.status(500).json({ error: err });
       });
   };
+  update = (req, res, next) => {
+    const idUpdate = req.params.id;
+    CodeBlock.updateOne({ _id: idUpdate }, req.body)
+      .then((res) => {
+        console.log(result);
+        res.status(201).json({
+          message: "Document updated successfully",
+          result: result,
+        });
+      })
+      .catch((error) => {
+        console.error(err);
+        res.status(500).json({ error: err });
+      });
+  };
 }
 
 module.exports = new SitesController();
