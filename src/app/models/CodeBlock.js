@@ -11,6 +11,7 @@ const CodeBlockSchema = new Schema(
     author: { type: Object, unique: false },
     filter: { type: String, unique: false },
     main_code: { type: String, unique: false },
+    approve: { type: Boolean, unique: false, default: false },
   },
   {
     _id: false,
