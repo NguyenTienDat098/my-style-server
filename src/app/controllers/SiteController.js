@@ -90,7 +90,7 @@ class SitesController {
       .then((res) => {
         console.log(result);
         res.status(201).json({
-          message: "Document updated successfully",
+          message: "Document finded successfully",
           result: result,
         });
       })
