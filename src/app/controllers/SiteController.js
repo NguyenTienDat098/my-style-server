@@ -100,6 +100,21 @@ class SitesController {
         res.status(500).json({ error: err });
       });
   };
+  delete = (req, res, next) => {
+    const idDelete = req.params.id;
+    CodeBlock.deleteOne({ _id: idDelete })
+      .then((result) => {
+        console.log(result);
+        res.status(201).json({
+          message: "Document deleted successfully",
+          result: result,
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+        res.status(500).json({ error: error });
+      });
+  };
 }
 
 module.exports = new SitesController();
